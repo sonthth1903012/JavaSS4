@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>User Management Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384—gg0yROiXCbMQv3Xipma34MD+dH/lfQ784/j6cY/iITQUOhcWr7x9JvoRxT2M2w1T"

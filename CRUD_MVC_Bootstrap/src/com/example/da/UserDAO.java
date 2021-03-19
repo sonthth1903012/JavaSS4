@@ -30,6 +30,13 @@ public class UserDAO {
         return connection;
     }
 
+//    public static void main(String[] args) throws SQLException, ClassNotFoundException{
+//        if (getConnection() != null){
+//            System.out.println("Success");
+//
+//        }
+//    }
+
     public void insertUser(User user) throws SQLException, ClassNotFoundException {
         Connection connection = getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
