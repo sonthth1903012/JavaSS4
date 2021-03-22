@@ -15,11 +15,11 @@
         %>
         <div class="header">
             <br>
-            <h1 align="center">Employees Manager</h1>
+            <h1 align="center">Product List</h1>
             <div class="menu bubplastic horizontal orange">
                 <ul>
                     <li><span class="menu_r"><a href="login.jsp"><span class="menu_ar">Login</span></a></span></li>
-                    <li class="highlight"><span class="menu_r"><a href="employeeManager.jsp"><span class="menu_ar">Employee Manager</span></a></span></li>
+                    <li class="highlight"><span class="menu_r"><a href="employeeManager.jsp"><span class="menu_ar">Product List</span></a></span></li>
                     <li><span class="menu_r"><a href="logout.jsp"><span class="menu_ar">logout</span></a></span></li>
                 </ul>
                 <br class="clearit" />
@@ -38,6 +38,7 @@
                     <th>Details</th>
                     <th colspan="2"></th>
                 </tr>
+
                 <jsp:useBean id="ebo" class="com.example.bol.ProductBO" scope="request"/>
                 <%
                     com.example.entities.Product[] arr=null;
@@ -54,6 +55,7 @@
             }
                     com.example.ConvertData convert = new com.example.ConvertData();
             if (arr.length > 0) {
+
                 for (int i = 0; i < arr.length; i++) {
                     out.println("<tr><td>" + arr[i].getName() + " </td>");
                     out.println("<td>" + arr[i].getPrice() + "</td>");

@@ -12,13 +12,11 @@
     <body>
         <div class="header">
             <br>
-            <h1 align="center">Employees Manager</h1>
+            <h1 align="center">Logout</h1>
             <div class="menu bubplastic horizontal orange">
                 <ul>
                     <li><span class="menu_r"><a href="login.jsp"><span class="menu_ar">login</span></a></span></li>
-                    <li><span class="menu_r"><a href="employeeManager.jsp"><span class="menu_ar">Employee Manager</span></a></span></li>
-                    <li><span class="menu_r"><a href="ProcessEmployee"><span class="menu_ar">Add New Employee</span></a></span></li>
-                    <li><span class="menu_r"><a href="searchEmployee.jsp"><span class="menu_ar">Search Employee</span></a></span></li>
+                    <li><span class="menu_r"><a href="employeeManager.jsp"><span class="menu_ar">Product List</span></a></span></li>
                     <li class="highlight"><span class="menu_r"><a href="logout.jsp"><span class="menu_ar">logout</span></a></span></li>
                 </ul>
                 <br class="clearit" />
