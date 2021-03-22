@@ -24,6 +24,7 @@
         </div>
         <%
         session.removeAttribute("username");
+            response.sendRedirect("login.jsp");
         %>
         <div class="content">
             <br><br>
