@@ -23,7 +23,7 @@ public class EmployeeManager extends HttpServlet {
         if (session.getAttribute("username") == null) {
             response.sendRedirect("login.jsp");
         }
-        com.example.bol.EmployeeBO ebo = new com.example.bol.EmployeeBO();
+        com.example.bol.ProductBO ebo = new com.example.bol.ProductBO();
         request.setAttribute("EmpBO", ebo);
         String value = request.getParameter("txtValue");
         String option = request.getParameter("ddlSearch");

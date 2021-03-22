@@ -20,8 +20,6 @@
                 <ul>
                     <li><span class="menu_r"><a href="login.jsp"><span class="menu_ar">Login</span></a></span></li>
                     <li class="highlight"><span class="menu_r"><a href="employeeManager.jsp"><span class="menu_ar">Employee Manager</span></a></span></li>
-                    <li><span class="menu_r"><a href="ProcessEmployee"><span class="menu_ar">Add New Employee</span></a></span></li>
-                    <li><span class="menu_r"><a href="searchEmployee.jsp"><span class="menu_ar">Search Employee</span></a></span></li>
                     <li><span class="menu_r"><a href="logout.jsp"><span class="menu_ar">logout</span></a></span></li>
                 </ul>
                 <br class="clearit" />
@@ -31,23 +29,18 @@
             <br><br>
             <table id="tb" width="100%" align="center">
                 <tr>
-                    <th colspan="11" height="50px"><h4>EMPLOYEE LIST</h4></th>
+                    <th colspan="11" height="50px"><h4>PRODUCT LIST</h4></th>
                 </tr>
                 <tr>
                     <th>Name</th>
-                    <th>Bithday Date</th>
-                    <th>Hire Date</th>
-                    <th>Address</th>
-                    <th>City</th>
-                    <th>Country</th>
-                    <th>Home Phone</th>
-                    <th>Mobile</th>
-                    <th>Email</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Details</th>
                     <th colspan="2"></th>
                 </tr>
-                <jsp:useBean id="ebo" class="com.example.bol.EmployeeBO" scope="request"/>
+                <jsp:useBean id="ebo" class="com.example.bol.ProductBO" scope="request"/>
                 <%
-                    com.example.entities.Employee[] arr=null;
+                    com.example.entities.Product[] arr=null;
             String option = request.getParameter("option");
             String value = request.getParameter("value");
             if (option == null || value == null) {
@@ -55,24 +48,17 @@
             } else {
                 if (option.equals("Name")) {
                     arr = ebo.find(0, value);
-                } else if (option.equals("City")) {
+                } else if (option.equals("Details")) {
                     arr = ebo.find(1, value);
                 }
             }
                     com.example.ConvertData convert = new com.example.ConvertData();
             if (arr.length > 0) {
                 for (int i = 0; i < arr.length; i++) {
-                    out.println("<tr><td>" + arr[i].getFirstName() + " " + arr[i].getLastName() + "</td>");
-                    out.println("<td>" + arr[i].getBirthDate() + "</td>");
-                    out.println("<td>" + arr[i].getHireDate() + "</td>");
-                    out.println("<td>" + arr[i].getAddress() + "</td>");
-                    out.println("<td>" + arr[i].getCity() + "</td>");
-                    out.println("<td>" + arr[i].getCountry() + "</td>");
-                    out.println("<td>" + arr[i].getHomePhone() + "</td>");
-                    out.println("<td>" + arr[i].getMobile() + "</td>");
-                    out.println("<td>" + arr[i].getEmail() + "</td>");
-                    out.println("<td align='center'><a href='ProcessEmployee?action=edit&id=" + arr[i].getEmployeeID() + "'>Edit </a></td>");
-                    out.println("<td align='center'><a href='ProcessEmployee?action=delete&id=" + arr[i].getEmployeeID() + "'> Delete</a></td></tr>");
+                    out.println("<tr><td>" + arr[i].getName() + " </td>");
+                    out.println("<td>" + arr[i].getPrice() + "</td>");
+                    out.println("<td>" + arr[i].getAmount() + "</td>");
+                    out.println("<td>" + arr[i].getDetails() + "</td>");
                 }
             }
                 %>

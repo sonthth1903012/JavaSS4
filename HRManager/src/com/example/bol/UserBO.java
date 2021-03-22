@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class UserBO {
 
     public boolean authorization(User u) {
-        String sql = "select * from users where username='" + u.getUserName() + "' and userpassword='" + u.getUserPassword() + "'";
+        String sql = "select * from tbuser where username='" + u.getUserName() + "' and userpassword='" + u.getUserPassword() + "'";
         DAO dao = new DAO();
         try {
             ResultSet rs = dao.executeQuery(sql);

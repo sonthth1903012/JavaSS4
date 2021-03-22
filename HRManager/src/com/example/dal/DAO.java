@@ -32,7 +32,7 @@ public class DAO {
         this.urlDriver = "jdbc:mysql://";
         this.hostName = "localhost";
         this.port = "3306";
-        this.databaseName = "test2";
+        this.databaseName = "FData";
         this.userName = "root";
         this.password = "";
         this.openConnection();

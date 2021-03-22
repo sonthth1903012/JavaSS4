@@ -6,7 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a095f881-b442-4c4d-8daa-3b1796858775" name="Default Changelist" comment="" />
+    <list default="true" id="a095f881-b442-4c4d-8daa-3b1796858775" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../HRManager/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HRManager/src/com/example/bol/ProductBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HRManager/src/com/example/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/WEB-INF/classes/com/example/dal/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/WEB-INF/classes/com/example/dal/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/employeeManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/employeeManager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/processEmployee2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/processEmployee2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/searchEmployee.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/out/production/HRManager/META-INF/HRManager.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/out/production/HRManager/com/example/dal/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/out/production/HRManager/com/example/dal/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/src/com/example/dal/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/src/com/example/dal/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/web/employeeManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/web/employeeManager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/web/processEmployee2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/web/processEmployee2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRManager/web/searchEmployee.jsp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +36,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -28,6 +47,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1pxH1qhOOTlKuFdHtBrVxVKEFxV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -37,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HRManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -151,6 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616117608158</updated>
       <workItem from="1616117612638" duration="11311000" />
+      <workItem from="1616377929544" duration="597000" />
     </task>
     <servers />
   </component>
