@@ -29,7 +29,7 @@ public class UserController {
     }
 
     //
-    @RequestMapping(value = "add")
+    @RequestMapping(value = "/add")
     public String addUser(Model model){
         model.addAttribute( "user",new User());
         return "addUser";
@@ -51,8 +51,8 @@ public class UserController {
     }
 
     //
-    @RequestMapping(value = "/delete",method = RequestMethod.DELETE)
-    public String deleteUsed(@RequestParam("id") Long userId,Model model){
+    @RequestMapping(value = "/delete")
+    public String deleteUser(@RequestParam("id") Long userId,Model model){
         userRepository.deleteById(userId);
         return "redirect:/";
     }
