@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b43241c-b303-4e17-91d2-18a0d9a0ddf7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="232" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fkxP8gU4VLtNC5hu3DaXwkPwpr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.20083682" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.auth.repository" />
+      <recent name="com.example.auth.entity" />
+      <recent name="com.example.auth.da" />
+      <recent name="com.example.auth.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jngst\Desktop\springboot-registration-login\src\main\resources" />
+      <recent name="C:\Users\jngst\Desktop\springboot-registration-login\src\main\java\com\example\auth" />
+      <recent name="C:\Users\jngst\Desktop\springboot-registration-login\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-registration-login" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.auth.WebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b43241c-b303-4e17-91d2-18a0d9a0ddf7" name="Default Changelist" comment="" />
+      <created>1596775864788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596775864788</updated>
+      <workItem from="1596775867520" duration="2515000" />
+      <workItem from="1617155698581" duration="891000" />
+      <workItem from="1617156980742" duration="5670000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Project_Structure" timestamp="1617157067706">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617157067706" />
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1617160465532">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617160465532" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617159922058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1617159922058" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1617164055178">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617164055178" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.0.bottom/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856696" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.0.center/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856695" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.0.left/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856694" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.0.right/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856695" />
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.1.bottom/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856697" />
+    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.1.center/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856697" />
+    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.1.left/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856696" />
+    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1617164059517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617164059517" />
+    <state width="982" height="579" key="GridCell.Tab.1.right/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617156856697" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1617160306348">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617160306348" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1617155816330">
+      <screen x="1280" y="25" width="1024" height="743" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.25.1280.715/1280.25.1024.743@1280.25.1024.743" timestamp="1617155816330" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1617158599033">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617158599033" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/springboot_registration_login$WebApplication.ic" NAME="WebApplication Coverage Results" MODIFIED="1617160681323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
