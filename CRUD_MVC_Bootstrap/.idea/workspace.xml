@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a095f881-b442-4c4d-8daa-3b1796858775" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../HRManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/employeeManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/out/artifacts/HRManager_war_exploded/employeeManager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HRManager/web/employeeManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HRManager/web/employeeManager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +159,7 @@
       <workItem from="1616117612638" duration="11311000" />
       <workItem from="1616377929544" duration="597000" />
       <workItem from="1616381079442" duration="369000" />
+      <workItem from="1617326681671" duration="517000" />
     </task>
     <servers />
   </component>
