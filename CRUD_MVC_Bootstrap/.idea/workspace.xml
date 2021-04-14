@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demoCRUD" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -160,6 +160,7 @@
       <workItem from="1616377929544" duration="597000" />
       <workItem from="1616381079442" duration="369000" />
       <workItem from="1617326681671" duration="892000" />
+      <workItem from="1618376186445" duration="81000" />
     </task>
     <servers />
   </component>
@@ -171,10 +172,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="958" y="99" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1616125090666" />
-    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1616128943755">
+    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1618376225341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1616128943755" />
+    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1618376225341" />
     <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1616129167293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
