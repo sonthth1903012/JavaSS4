@@ -18,32 +18,30 @@ public class WebController {
     @Autowired
     private UserValidator userValidator;
 
-    @RequestMapping(path = {"/login",""})
-    public String login()
-    {
+    @RequestMapping(path = {"/login", ""})
+    public String login() {
         return "login";
     }
+
     @RequestMapping(path = "/home")
-    public String home()
-    {
+    public String home() {
         return "index";
     }
+
     @RequestMapping(path = "/registration")
-    public String showRegistrationForm(Model model)
-    {
+    public String showRegistrationForm(Model model) {
         User user = new User();
-        model.addAttribute("user",user);
+        model.addAttribute("user", user);
         return "registration";
     }
+
     @RequestMapping(path = "/registration", method = RequestMethod.POST)
-    public String registerUserAccount(@ModelAttribute("user")User user, BindingResult result,Model model)
-    {
-        userValidator.validate(user,result);
-        if (result.hasErrors())
-        {
+    public String registerUserAccount(@ModelAttribute("user") User user, BindingResult result, Model model) {
+        userValidator.validate(user, result);
+        if (result.hasErrors()) {
             //model.addAttribute("user",user);
             return "registration";
-        }else{
+        } else {
             userService.save(user);
             return "redirect:/registration?success";
         }

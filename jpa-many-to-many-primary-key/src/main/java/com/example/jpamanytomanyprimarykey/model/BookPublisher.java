@@ -18,8 +18,8 @@ public class BookPublisher {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "book_id")
     private Book book;
-    @ManyToOne(fetch =  FetchType.LAZY,optional = false)
-    @JoinColumn(name= "publisher_id")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
     private Date publishDate;

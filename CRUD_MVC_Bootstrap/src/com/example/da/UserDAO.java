@@ -21,7 +21,8 @@ public class UserDAO {
     private static final String DELETE_USERS_SQL = "DELETE FROM users WHERE id = ?";
     private static final String UPDATE_USERS_SQL = "UPDATE users set name = ?,email= ?, country =? WHERE id = ?;";
 
-    public UserDAO() {}
+    public UserDAO() {
+    }
 
     protected Connection getConnection() throws ClassNotFoundException, SQLException {
         Connection connection = null;

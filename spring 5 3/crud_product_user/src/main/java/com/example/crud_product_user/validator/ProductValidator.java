@@ -23,9 +23,9 @@ public class ProductValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         Product pro = (Product) target;
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"pro_name","NotEmpty.pro.pro_name");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pro_name", "NotEmpty.pro.pro_name");
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"pro_desc","NotEmpty.pro.pro_desc");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pro_desc", "NotEmpty.pro.pro_desc");
 
     }
 }

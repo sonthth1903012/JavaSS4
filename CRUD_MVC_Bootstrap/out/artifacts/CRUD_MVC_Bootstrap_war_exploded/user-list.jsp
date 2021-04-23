@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>User Management Application</title>
@@ -40,33 +40,34 @@
         </div>
         <br>
         <table class="table table-bordered">
-            <thread> <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Country</th>
-                <th>Actions</th>
+            <thread>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Actions</th>
                 </tr>
             </thread>
             <tbody>
             <c:forEach var="user" items="${listUser}">
-             <tr>
-                 <td>
-                    <c:out value ="${user.id}"/>
-                 </td>
-                 <td>
-                     <c:out value = "${user.name}"/>
-                 </td>
-                 <td>
-                     <c:out value = "${user.email}"/>
-                 </td>
-                 <td>
-                     <c:out value= "${user.country}"/>
-                 </td>
-                 <td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
-                     <a href="delete?id=<c:out value='${user.id}' />">Delete</a>
-                 </td>
-             </tr>
+                <tr>
+                    <td>
+                        <c:out value="${user.id}"/>
+                    </td>
+                    <td>
+                        <c:out value="${user.name}"/>
+                    </td>
+                    <td>
+                        <c:out value="${user.email}"/>
+                    </td>
+                    <td>
+                        <c:out value="${user.country}"/>
+                    </td>
+                    <td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
+                        <a href="delete?id=<c:out value='${user.id}' />">Delete</a>
+                    </td>
+                </tr>
             </c:forEach>
             <!-- } -->
             </tbody>

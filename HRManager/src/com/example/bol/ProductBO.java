@@ -58,8 +58,7 @@ public class ProductBO {
 
 
     /**
-     *
-     get Employee by EmployeeID
+     * get Employee by EmployeeID
      */
     public Product getByID(int id) {
         String sql = "select * from tbProducts where ID=" + id;
@@ -84,8 +83,7 @@ public class ProductBO {
     }
 
     /**
-     *
-     Convert from Vector to Employee Array
+     * Convert from Vector to Employee Array
      */
     private Product[] convertToArray(Vector v) {
         int n = v.size();
@@ -103,7 +101,7 @@ public class ProductBO {
         String sql = "";
         switch (option) {
             case 0:
-                sql = "select * from tbProducts where Name='" + value +"' ";
+                sql = "select * from tbProducts where Name='" + value + "' ";
                 break;
             case 1:
                 sql = "select * from tbProducts where Details='" + value + "'";

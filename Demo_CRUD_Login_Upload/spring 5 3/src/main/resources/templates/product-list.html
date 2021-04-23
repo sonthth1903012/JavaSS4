@@ -18,33 +18,33 @@
                 <div class="alert alert-danger d-none" role="alert" id="messageError"></div>
                 <table class="table table-striped">
                     <thead>
-                        <tr class="row">
-                            <th class="col-md-1"></th>
-                            <th class="col-md-1">#</th>
-                            <th class="col-md-2">Avatar</th>
-                            <th class="col-md-2">Name</th>
-                            <th class="col-md-2">Price</th>
-                            <th class="col-md-2">Date</th>
-                            <th class="col-md-2">Action</th>
-                        </tr>
+                    <tr class="row">
+                        <th class="col-md-1"></th>
+                        <th class="col-md-1">#</th>
+                        <th class="col-md-2">Avatar</th>
+                        <th class="col-md-2">Name</th>
+                        <th class="col-md-2">Price</th>
+                        <th class="col-md-2">Date</th>
+                        <th class="col-md-2">Action</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="product : ${pagination.getContent()}" class="row" th:id="${'product-' + product.id}">
-                            <td><input type="checkbox" class="check-item" th:value="${product.id}"></td>
-                            <td class="col-md-1" th:text="${product.id}"></td>
-                            <td class="col-md-2">
-                                <div class="rounded img-thumbnail"
-                                     th:style="'background-image:url(' + ${product.imgUrl} + '); background-size:cover; width:70px; height:70px;'">
-                                </div>
-                            </td>
-                            <td class="col-md-2 product-name" th:text="${product.name}"></td>
-                            <td class="col-md-2" th:text="${product.price}"></td>
-                            <td class="col-md-2" th:text="${product.createdTime}"></td>
-                            <td class="col-md-2">
-                                <a class="btn-link mr-2" href="#">Edit</a>
-                                <a class="btn-link btn-delete-product" href="#">Delete</a>
-                            </td>
-                        </tr>
+                    <tr th:each="product : ${pagination.getContent()}" class="row" th:id="${'product-' + product.id}">
+                        <td><input type="checkbox" class="check-item" th:value="${product.id}"></td>
+                        <td class="col-md-1" th:text="${product.id}"></td>
+                        <td class="col-md-2">
+                            <div class="rounded img-thumbnail"
+                                 th:style="'background-image:url(' + ${product.imgUrl} + '); background-size:cover; width:70px; height:70px;'">
+                            </div>
+                        </td>
+                        <td class="col-md-2 product-name" th:text="${product.name}"></td>
+                        <td class="col-md-2" th:text="${product.price}"></td>
+                        <td class="col-md-2" th:text="${product.createdTime}"></td>
+                        <td class="col-md-2">
+                            <a class="btn-link mr-2" href="#">Edit</a>
+                            <a class="btn-link btn-delete-product" href="#">Delete</a>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
 
@@ -72,14 +72,17 @@
                                     <a class="page-link" th:href="@{/product/list(page=${page}-1, limit=${limit})}">Previous</a>
                                 </li>
                                 <li class="page-item" th:if="${page>1}">
-                                    <a class="page-link" th:href="@{/product/list(page=${page}-1, limit=${limit})}" th:text="${page}-1"></a>
+                                    <a class="page-link" th:href="@{/product/list(page=${page}-1, limit=${limit})}"
+                                       th:text="${page}-1"></a>
                                 </li>
                                 <li class="page-item active"><a class="page-link" href="#" th:text="${page}"></a></li>
                                 <li class="page-item" th:if="${page<pagination.getTotalPages()}">
-                                    <a class="page-link" th:href="@{/product/list(page=${page}+1, limit=${limit})}" th:text="${page}+1"></a>
+                                    <a class="page-link" th:href="@{/product/list(page=${page}+1, limit=${limit})}"
+                                       th:text="${page}+1"></a>
                                 </li>
                                 <li class="page-item" th:if="${page<pagination.getTotalPages()}">
-                                    <a class="page-link" th:href="@{/product/list(page=${page}+1, limit=${limit})}">Next</a>
+                                    <a class="page-link"
+                                       th:href="@{/product/list(page=${page}+1, limit=${limit})}">Next</a>
                                 </li>
                             </ul>
                         </div>
@@ -121,7 +124,7 @@
 
     $('#btnDelete').click(function () {
         $.ajax({
-            url:'/endpoint/product/delete/' + currentProductId,
+            url: '/endpoint/product/delete/' + currentProductId,
             type: 'DELETE',
             success: function (resp) {
                 $('#product-' + currentProductId).remove();
@@ -142,7 +145,7 @@
     });
 
     $('#btnApply').click(function () {
-        switch ($('#actionSelectAll').val()){
+        switch ($('#actionSelectAll').val()) {
             case '0':
                 alert('Please choose an action.');
                 break;
@@ -154,20 +157,20 @@
                 break;
         }
     });
-    
+
     function deleteMany() {
         var ids = [];
         $('.check-item:checked').each(function (index) {
             ids.push($(this).val());
         });
-        if(ids.length == 0){
+        if (ids.length == 0) {
             alert('Please choose at least 1 product.');
             return;
         }
         $.ajax({
-            url:'/endpoint/product/delete-many',
-            type:'DELETE',
-            data:{
+            url: '/endpoint/product/delete-many',
+            type: 'DELETE',
+            data: {
                 ids: ids.join(',')
             },
             success: function () {

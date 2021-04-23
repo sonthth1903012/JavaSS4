@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     "use strict"
 
     var form = $("#step-form-horizontal");
@@ -6,10 +6,9 @@
         headerTag: "h4",
         bodyTag: "section",
         transitionEffect: "slideLeft",
-        autoFocus: true, 
+        autoFocus: true,
         transitionEffect: "slideLeft",
-        onStepChanging: function (event, currentIndex, newIndex)
-        {
+        onStepChanging: function (event, currentIndex, newIndex) {
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         }

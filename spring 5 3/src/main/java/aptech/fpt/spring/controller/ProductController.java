@@ -67,16 +67,17 @@ public class ProductController {
     }
 
     @RequestMapping(path = "/product/edit/{id}", method = RequestMethod.POST)
-  public String updateProduct(@PathVariable int id,@Valid Product product, BindingResult result, Model model){
-       Optional<Product> optionalProduct = productModel.findById(id);
-       if (optionalProduct.isPresent()) {
-          if (result.hasErrors()) {
-             return "product-form";
-         }
-         productModel.save(product);
-        return "redirect:/product/list";
+    public String updateProduct(@PathVariable int id, @Valid Product product, BindingResult result, Model model) {
+        Optional<Product> optionalProduct = productModel.findById(id);
+        if (optionalProduct.isPresent()) {
+            if (result.hasErrors()) {
+                return "product-form";
+            }
+            productModel.save(product);
+            return "redirect:/product/list";
         } else {
-           return "not-found";        }
+            return "not-found";
+        }
     }
 
     @RequestMapping(path = "/product/delete/{id}", method = RequestMethod.POST)

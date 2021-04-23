@@ -12,10 +12,12 @@ import org.springframework.validation.Validator;
 public class UserValidator implements Validator {
     @Autowired
     private UserService userService;
+
     @Override
     public boolean supports(Class<?> aClass) {
         return User.class.equals(aClass);
     }
+
     @Override
     public void validate(Object o, Errors errors) {
         User user = (User) o;

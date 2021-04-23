@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <servlet>
         <servlet-name>EmployeeManager</servlet-name>
         <servlet-class>HRManager.servlet.EmployeeManager</servlet-class>
@@ -8,7 +9,10 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>HRManager.servlet.Login</servlet-class>
     </servlet>
-    <servlet><servlet-name>ProcessEmployee</servlet-name><servlet-class>HRManager.servlet.ProcessEmployee</servlet-class></servlet>
+    <servlet>
+        <servlet-name>ProcessEmployee</servlet-name>
+        <servlet-class>HRManager.servlet.ProcessEmployee</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>CheckEmail</servlet-name>
         <servlet-class>HRManager.servlet.ajax.CheckEmail</servlet-class>
@@ -44,5 +48,5 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
-        </welcome-file-list>
+    </welcome-file-list>
 </web-app>

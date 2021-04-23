@@ -2,6 +2,7 @@ package com.example;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 public class ValidData {
 
     final public static int VN_DATE = 0;
@@ -29,8 +30,7 @@ public class ValidData {
     }
 
     /**
-     *
-     check a String is Date
+     * check a String is Date
      */
     public boolean isDate(String date) {
         boolean check = false;
@@ -79,8 +79,7 @@ public class ValidData {
     }
 
     /**
-     *
-     check a String is Date
+     * check a String is Date
      */
     public boolean isDate(String date, int option) {
         boolean check = false;

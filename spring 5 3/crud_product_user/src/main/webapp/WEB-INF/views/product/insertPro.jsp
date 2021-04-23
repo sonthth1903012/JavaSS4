@@ -1,5 +1,4 @@
-
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
@@ -22,20 +21,23 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form:form action="/product/savePro" method="post" modelAttribute="pro" enctype="multipart/form-data">
+                            <form:form action="/product/savePro" method="post" modelAttribute="pro"
+                                       enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="control_label" for="firstName">Product Name</label>
-                                    <form:input id="firstName" class="form-control" path="pro_name"  autofocus="autofocus"/>
+                                    <form:input id="firstName" class="form-control" path="pro_name"
+                                                autofocus="autofocus"/>
                                     <form:errors path="pro_name" cssClass="colorRed"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control_label" for="email">Description</label>
-                                    <form:input id="email" class="form-control" path="pro_desc"   autofocus="autofocus"/>
+                                    <form:input id="email" class="form-control" path="pro_desc" autofocus="autofocus"/>
                                     <form:errors path="pro_desc" cssClass="colorRed"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control_label" for="email">Image</label>
-                                    <input id="email" class="form-control" type="file" name="uploadingfile"   autofocus="autofocus"/>
+                                    <input id="email" class="form-control" type="file" name="uploadingfile"
+                                           autofocus="autofocus"/>
 
                                 </div>
                                 <div class="form-group">

@@ -17,7 +17,7 @@ import java.util.Date;
 
 
 @SpringBootApplication
-public class JpaWebDemo2Application  implements CommandLineRunner {
+public class JpaWebDemo2Application implements CommandLineRunner {
 
     @Autowired
     private BookRepository bookRepository;
@@ -32,17 +32,17 @@ public class JpaWebDemo2Application  implements CommandLineRunner {
 
     @Override
     @Transactional
-    public void run(String... args) throws Exception{
+    public void run(String... args) throws Exception {
         Book b1 = new Book("Al'z Zebrasiet");
         Book b2 = new Book("Willing for A Day");
-        bookRepository.saveAll(Arrays.asList(b1,b2));
+        bookRepository.saveAll(Arrays.asList(b1, b2));
 
         Publisher p1 = new Publisher("Kim Dong");
         Publisher p2 = new Publisher("Nha Nam");
-        publisherRepository.saveAll(Arrays.asList(p1,p2));
+        publisherRepository.saveAll(Arrays.asList(p1, p2));
 
-        BookPublisher bp1 = new BookPublisher(b1,p1, new Date());
-        BookPublisher bp2 = new BookPublisher(b2,p2, new Date());
+        BookPublisher bp1 = new BookPublisher(b1, p1, new Date());
+        BookPublisher bp2 = new BookPublisher(b2, p2, new Date());
         bookPublisherRepository.saveAll(Arrays.asList(bp1, bp2));
     }
 

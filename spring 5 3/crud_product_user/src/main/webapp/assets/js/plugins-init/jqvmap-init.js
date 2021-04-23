@@ -2,11 +2,11 @@
     "use strict"
 
 
-/*******************
-jQvectormap
-*******************/
+    /*******************
+     jQvectormap
+     *******************/
 
-    $('#world-map').vectorMap({ 
+    $('#world-map').vectorMap({
         map: 'world_en',
         backgroundColor: 'transparent',
         borderColor: 'rgb(239, 242, 244)',
@@ -21,18 +21,17 @@ jQvectormap
         selectedColor: 'rgba(239, 242, 244 0.9)',
         selectedRegions: null,
         showTooltip: true,
-        onRegionClick: function(element, code, region)
-        {
+        onRegionClick: function (element, code, region) {
             var message = 'You clicked "'
                 + region
                 + '" which has the code: '
                 + code.toUpperCase();
-     
+
             alert(message);
         }
     });
 
-    $('#usa').vectorMap({ 
+    $('#usa').vectorMap({
         map: 'usa_en',
         backgroundColor: 'transparent',
         borderColor: 'rgb(239, 242, 244)',
@@ -47,13 +46,12 @@ jQvectormap
         selectedColor: 'rgba(239, 242, 244 0.9)',
         selectedRegions: null,
         showTooltip: true,
-        onRegionClick: function(element, code, region)
-        {
+        onRegionClick: function (element, code, region) {
             var message = 'You clicked "'
                 + region
                 + '" which has the code: '
                 + code.toUpperCase();
-     
+
             alert(message);
         }
     });

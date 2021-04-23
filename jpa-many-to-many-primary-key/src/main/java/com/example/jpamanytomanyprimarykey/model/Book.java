@@ -18,11 +18,11 @@ public class Book {
     private Integer id;
     private String name;
 
-    public Book(String name){
-        this.name= name;
+    public Book(String name) {
+        this.name = name;
     }
 
-    public Book(){
+    public Book() {
 
     }
 }

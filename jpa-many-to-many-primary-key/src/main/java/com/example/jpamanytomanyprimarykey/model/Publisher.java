@@ -1,7 +1,6 @@
 package com.example.jpamanytomanyprimarykey.model;
 
 
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

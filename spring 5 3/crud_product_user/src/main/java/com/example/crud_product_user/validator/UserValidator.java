@@ -21,26 +21,22 @@ public class UserValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         User user = (User) target;
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"username","NotEmpty");
-        if(user.getUsername().length()<6||user.getUsername().length()>32)
-        {
-            errors.rejectValue("username","Size.user.username");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
+        if (user.getUsername().length() < 6 || user.getUsername().length() > 32) {
+            errors.rejectValue("username", "Size.user.username");
 
         }
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"email","NotEmpty");
-        if(user.getEmail().length()<6||user.getEmail().length()>32)
-        {
-            errors.rejectValue("email","Size.user.email");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty");
+        if (user.getEmail().length() < 6 || user.getEmail().length() > 32) {
+            errors.rejectValue("email", "Size.user.email");
 
         }
-        if(userService.findByUsername(user.getEmail())!=null)
-        {
-            errors.rejectValue("email","Duplicate.user.email");
+        if (userService.findByUsername(user.getEmail()) != null) {
+            errors.rejectValue("email", "Duplicate.user.email");
         }
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"password","NotEmpty");
-        if (user.getPassword().length()<8||user.getPassword().length()>32)
-        {
-            errors.rejectValue("password","Size.user.password");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
+        if (user.getPassword().length() < 8 || user.getPassword().length() > 32) {
+            errors.rejectValue("password", "Size.user.password");
         }
 //        if(!user.getPasswordConfirm().equals(user.getPassword()))
 //        {

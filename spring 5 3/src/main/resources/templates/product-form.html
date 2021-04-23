@@ -32,14 +32,16 @@
                         <div class="col-6">
                             <label>Price</label>
                             <input type="text" th:field="*{price}" class="form-control">
-                            <small class="text-danger" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></small>
+                            <small class="text-danger" th:if="${#fields.hasErrors('price')}"
+                                   th:errors="*{price}"></small>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-3">
                             <label>Thumbnail</label>
                             <input type="file" name="myFile" class="form-control">
-                            <small class="text-danger" th:if="${#fields.hasErrors('imgUrl')}" th:errors="*{myFile}"></small>
+                            <small class="text-danger" th:if="${#fields.hasErrors('imgUrl')}"
+                                   th:errors="*{myFile}"></small>
                         </div>
                     </div>
                     <div class="form-group">

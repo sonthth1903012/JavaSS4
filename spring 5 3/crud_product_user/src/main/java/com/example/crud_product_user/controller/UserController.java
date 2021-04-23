@@ -18,19 +18,17 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(path = "")
-    public String getAllUser(Model model)
-    {
+    public String getAllUser(Model model) {
         List<User> list = userService.getAllUser();
-        model.addAttribute("list",list);
+        model.addAttribute("list", list);
 
         return "user/list";
     }
 
     @RequestMapping(path = "/userDetail")
-    public String getUserById(@RequestParam("id")long id,Model model)
-    {
+    public String getUserById(@RequestParam("id") long id, Model model) {
         User u = userService.getUserById(id);
-        model.addAttribute("user",u);
+        model.addAttribute("user", u);
         return "user/detail";
     }
 }

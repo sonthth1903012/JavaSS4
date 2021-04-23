@@ -21,15 +21,15 @@ public class Book {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "book_publisher",
-        joinColumns =  @JoinColumn(name = "book_id", referencedColumnName = "id"),
-        inverseJoinColumns = @JoinColumn(name = "publisher_id", referencedColumnName = "id"))
+            joinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "publisher_id", referencedColumnName = "id"))
 
     private Set<Publisher> publishers = new HashSet<>();
 
-    public Book(String name, Publisher...publishers) {
+    public Book(String name, Publisher... publishers) {
         this.name = name;
         this.publishers = Stream.of(publishers).collect(Collectors.toSet());
-        this.publishers.forEach(x->x.getBooks().add(this));
+        this.publishers.forEach(x -> x.getBooks().add(this));
     }
 
     public Book() {

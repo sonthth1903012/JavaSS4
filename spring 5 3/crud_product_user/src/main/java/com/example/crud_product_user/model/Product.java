@@ -56,7 +56,7 @@ public class Product {
     }
 
     public String getImage() {
-        if (image == null )return null;
+        if (image == null) return null;
         return image;
     }
 

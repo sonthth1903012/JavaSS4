@@ -11,17 +11,16 @@ public class User {
     private Long id;
     private String username;
     private String password;
-    @Column(name = "fullname" , length = 50)
-    private  String fullname;
+    @Column(name = "fullname", length = 50)
+    private String fullname;
     @Column(name = "age")
-    private  Integer age;
-    @Column(name = "gender" , length = 50)
-    private  boolean gender;
+    private Integer age;
+    @Column(name = "gender", length = 50)
+    private boolean gender;
 
-    public User(){
+    public User() {
         super();
     }
-
 
 
     @Transient

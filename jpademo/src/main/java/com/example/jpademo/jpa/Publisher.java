@@ -18,7 +18,7 @@ public class Publisher {
     @ManyToMany(mappedBy = "publishers")
     private Set<Book> books = new HashSet<>();
 
-    public Publisher(String name){
+    public Publisher(String name) {
         this.name = name;
     }
 

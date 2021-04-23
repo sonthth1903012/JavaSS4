@@ -39,7 +39,6 @@ public class DAO {
     }
 
 
-
     public ResultSet executeQuery(String sql) throws SQLException {
         if (cnn == null) {
             openConnection();
@@ -66,8 +65,8 @@ public class DAO {
         return resultCount;
     }
 
-    public static void main(String[] args) throws SQLException, ClassNotFoundException{
-        if (getConnection()==null){
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        if (getConnection() == null) {
             System.out.println("connect success");
         }
     }
@@ -96,17 +95,6 @@ public class DAO {
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
     /**

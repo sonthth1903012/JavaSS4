@@ -2,6 +2,7 @@ package com.example.bol;
 
 import com.example.dal.DAO;
 import com.example.entities.User;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

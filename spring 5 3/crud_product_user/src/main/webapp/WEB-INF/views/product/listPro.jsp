@@ -87,7 +87,7 @@
 <jsp:include page="../layout/footer.jsp"/>--%>
 <%----%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
@@ -122,23 +122,34 @@
                                 </thead>
                                 <tbody>
                                 <c:forEach items="${list}" var="pro">
-                                <tr>
-                                    <td><strong>${pro.id}</strong></td>
-                                    <td>${pro.pro_name}</td>
-                                    <td>${pro.pro_desc}</td>
-                                    <td><img src="${contextPath}${pro.image}" width="50px"/></td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
-                                                <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="${contextPath}/product/edit?id=${pro.id}">Edit</a>
-                                                <a class="dropdown-item" href="${contextPath}/product/deletePro?id=${pro.id}">Delete</a>
+                                    <tr>
+                                        <td><strong>${pro.id}</strong></td>
+                                        <td>${pro.pro_name}</td>
+                                        <td>${pro.pro_desc}</td>
+                                        <td><img src="${contextPath}${pro.image}" width="50px"/></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-success light sharp"
+                                                        data-toggle="dropdown">
+                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                           fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24"/>
+                                                            <circle fill="#000000" cx="5" cy="12" r="2"/>
+                                                            <circle fill="#000000" cx="12" cy="12" r="2"/>
+                                                            <circle fill="#000000" cx="19" cy="12" r="2"/>
+                                                        </g>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item"
+                                                       href="${contextPath}/product/edit?id=${pro.id}">Edit</a>
+                                                    <a class="dropdown-item"
+                                                       href="${contextPath}/product/deletePro?id=${pro.id}">Delete</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
                                 </c:forEach>
                                 </tbody>
                             </table>

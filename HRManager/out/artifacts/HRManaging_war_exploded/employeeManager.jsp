@@ -1,53 +1,56 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Employees Manager</title>
-        <link href="css/menu_style.css" type="text/css" rel="stylesheet" />
-        <link href="css/style.css" type="text/css" rel="stylesheet" />
-    </head>
-    <body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Employees Manager</title>
+    <link href="css/menu_style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<%
+    if (session.getAttribute("username") != null) {
+%>
+<div class="header">
+    <br>
+    <h1 align="center">Employees Manager</h1>
+    <div class="menu bubplastic horizontal orange">
+        <ul>
+            <li><span class="menu_r"><a href="login.jsp"><span class="menu_ar">Login</span></a></span></li>
+            <li class="highlight"><span class="menu_r"><a href="employeeManager.jsp"><span class="menu_ar">Employee Manager</span></a></span>
+            </li>
+            <li><span class="menu_r"><a href="ProcessEmployee"><span class="menu_ar">Add New Employee</span></a></span>
+            </li>
+            <li><span class="menu_r"><a href="searchEmployee.jsp"><span
+                    class="menu_ar">Search Employee</span></a></span></li>
+            <li><span class="menu_r"><a href="logout.jsp"><span class="menu_ar">logout</span></a></span></li>
+        </ul>
+        <br class="clearit"/>
+    </div>
+</div>
+<div class="content">
+    <br><br>
+    <table id="tb" width="100%" align="center">
+        <tr>
+            <th colspan="11" height="50px"><h4>EMPLOYEE LIST</h4></th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Bithday Date</th>
+            <th>Hire Date</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Home Phone</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th colspan="2"></th>
+        </tr>
+        <jsp:useBean id="ebo" class="HRManager.bol.EmployeeBO" scope="request"/>
         <%
-        if (session.getAttribute("username") != null) {
-        %>
-        <div class="header">
-            <br>
-            <h1 align="center">Employees Manager</h1>
-            <div class="menu bubplastic horizontal orange">
-                <ul>
-                    <li><span class="menu_r"><a href="login.jsp"><span class="menu_ar">Login</span></a></span></li>
-                    <li class="highlight"><span class="menu_r"><a href="employeeManager.jsp"><span class="menu_ar">Employee Manager</span></a></span></li>
-                    <li><span class="menu_r"><a href="ProcessEmployee"><span class="menu_ar">Add New Employee</span></a></span></li>
-                    <li><span class="menu_r"><a href="searchEmployee.jsp"><span class="menu_ar">Search Employee</span></a></span></li>
-                    <li><span class="menu_r"><a href="logout.jsp"><span class="menu_ar">logout</span></a></span></li>
-                </ul>
-                <br class="clearit" />
-            </div>
-        </div>
-        <div class="content">
-            <br><br>
-            <table id="tb" width="100%" align="center">
-                <tr>
-                    <th colspan="11" height="50px"><h4>EMPLOYEE LIST</h4></th>
-                </tr>
-                <tr>
-                    <th>Name</th>
-                    <th>Bithday Date</th>
-                    <th>Hire Date</th>
-                    <th>Address</th>
-                    <th>City</th>
-                    <th>Country</th>
-                    <th>Home Phone</th>
-                    <th>Mobile</th>
-                    <th>Email</th>
-                    <th colspan="2"></th>
-                </tr>
-                <jsp:useBean id="ebo" class="HRManager.bol.EmployeeBO" scope="request"/>
-                <%
-            HRManager.entities.Employee[] arr=null;
+            HRManager.entities.Employee[] arr = null;
             String option = request.getParameter("option");
             String value = request.getParameter("value");
             if (option == null || value == null) {
@@ -75,13 +78,14 @@
                     out.println("<td align='center'><a href='ProcessEmployee?action=delete&id=" + arr[i].getEmployeeID() + "'> Delete</a></td></tr>");
                 }
             }
-                %>
-            </table>
-            <br>
-            <%} else {
-            %>
-            <jsp:forward page="login.jsp"/>
-            <%}%>
-        </div>
-    </body>
+        %>
+    </table>
+    <br>
+    <%
+    } else {
+    %>
+    <jsp:forward page="login.jsp"/>
+    <%}%>
+</div>
+</body>
 </html>

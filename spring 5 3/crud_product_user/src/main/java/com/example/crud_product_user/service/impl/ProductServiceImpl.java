@@ -16,11 +16,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public boolean insertPro(Product p) {
-        try{
+        try {
             productRepository.save(p);
             return true;
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
@@ -28,7 +27,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getAllProduct() {
-            List<Product> list = productRepository.findAll();
+        List<Product> list = productRepository.findAll();
         return list;
     }
 
@@ -40,11 +39,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public boolean updatePro(Product p) {
-        try{
+        try {
             productRepository.save(p);
             return true;
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
@@ -52,11 +50,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public boolean deletePro(int id) {
-        try{
+        try {
             productRepository.deleteById(id);
             return true;
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;

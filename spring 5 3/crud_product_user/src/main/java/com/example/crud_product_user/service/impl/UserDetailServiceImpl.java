@@ -26,13 +26,12 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(username);
-        if (user== null)throw new UsernameNotFoundException(username);
+        if (user == null) throw new UsernameNotFoundException(username);
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        for (User_roles role:user.getListUserRole())
-        {
+        for (User_roles role : user.getListUserRole()) {
             grantedAuthorities.add(new SimpleGrantedAuthority(role.getRoleId().getName()));
         }
-        return new org.springframework.security.core.userdetails.User(user.getUsername(),user.getPassword(),
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
                 grantedAuthorities);
     }
 }

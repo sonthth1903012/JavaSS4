@@ -13,14 +13,14 @@ public class MvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/assets/**").addResourceLocations("/assets/");
-        exposeDirectory("uploadingDir",registry);
+        exposeDirectory("uploadingDir", registry);
 
     }
-    private void exposeDirectory(String dirName, ResourceHandlerRegistry registry)
-    {
+
+    private void exposeDirectory(String dirName, ResourceHandlerRegistry registry) {
         Path uploadDir = Paths.get(dirName);
         String uploadPath = uploadDir.toFile().getAbsolutePath();
-        if(dirName.startsWith("../"))dirName = dirName.replace("../","");
-        registry.addResourceHandler("/"+dirName+"/**").addResourceLocations("file:/"+uploadPath+"/");
+        if (dirName.startsWith("../")) dirName = dirName.replace("../", "");
+        registry.addResourceHandler("/" + dirName + "/**").addResourceLocations("file:/" + uploadPath + "/");
     }
 }

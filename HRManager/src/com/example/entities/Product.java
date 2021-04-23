@@ -7,7 +7,7 @@ public class Product {
     private String Amount;
     private String Details;
 
-    public Product(){
+    public Product() {
 
     }
 

@@ -18,27 +18,27 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfiguaration extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
+
     @Bean
-    public BCryptPasswordEncoder passwordEncoder1()
-    {
+    public BCryptPasswordEncoder passwordEncoder1() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    public AuthenticationManager customAuthenticationManager()throws Exception
-    {
+    public AuthenticationManager customAuthenticationManager() throws Exception {
         return authenticationManager();
     }
+
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth)throws Exception
-    {
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder1());
     }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // TODO Auto-generated method stub
         http.authorizeRequests().antMatchers(
-                "/registration**","/web**","/webjars/**","/assets/**","/","/uploadingDir/**",
+                "/registration**", "/web**", "/webjars/**", "/assets/**", "/", "/uploadingDir/**",
                 "/js/**",
                 "/css/**",
                 "/img/**").permitAll()

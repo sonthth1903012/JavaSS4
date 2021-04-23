@@ -21,38 +21,38 @@ public class ProductController {
 
     //index
     @RequestMapping("/")
-    public String index(Model model){
+    public String index(Model model) {
         List<Product> users = (List<Product>) productRepository.findAll();
         //request.setAttribute("users"users);
-        model.addAttribute( "users",users);
+        model.addAttribute("users", users);
         return "index";
     }
 
     //
     @RequestMapping(value = "/add")
-    public String addUser(Model model){
-        model.addAttribute( "product",new Product());
+    public String addUser(Model model) {
+        model.addAttribute("product", new Product());
         return "addProduct";
     }
 
     //
-    @RequestMapping(value = "/save",method = RequestMethod.POST)
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(Product product) {
         productRepository.save(product);
         return "redirect:/";
     }
 
     //
-    @RequestMapping(value = "/edit",method = RequestMethod.GET)
-    public String editProduct(@RequestParam("id") Long userId, Model model){
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    public String editProduct(@RequestParam("id") Long userId, Model model) {
         Optional<Product> userEdit = productRepository.findById(userId);
-        userEdit.ifPresent(user ->model.addAttribute( "user",user) );
+        userEdit.ifPresent(user -> model.addAttribute("user", user));
         return "editProduct";
     }
 
     //
     @RequestMapping(value = "/delete")
-    public String deleteProduct(@RequestParam("id") Long productId, Model model){
+    public String deleteProduct(@RequestParam("id") Long productId, Model model) {
         productRepository.deleteById(productId);
         return "redirect:/";
     }

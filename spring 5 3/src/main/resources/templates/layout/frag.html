@@ -9,7 +9,8 @@
         <title th:text="${title}"></title>
         <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-              integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+              integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+              crossorigin="anonymous">
         <script
                 src="https://code.jquery.com/jquery-3.3.1.min.js"
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -20,7 +21,9 @@
     <!--Header-->
     <nav th:fragment="header" class="navbar navbar-light bg-light">
         <div class="col-md-3">
-            <a class="navbar-brand" href="#"><i class="fab fa-playstation fa-4x"></i></a>
+            <a class="navbar-brand" href="#">
+                <i class="fab fa-playstation fa-4x"></i>
+            </a>
             <span class="text-muted">Site Slogan</span>
         </div>
         <div class="col-md-7">

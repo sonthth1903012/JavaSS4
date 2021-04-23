@@ -13,18 +13,20 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JpademoApplication implements CommandLineRunner {
 
 
-	@Autowired
-	BookRepository bookRepository;
+    @Autowired
+    BookRepository bookRepository;
 
-	public static void main(String[] args) { SpringApplication.run(JpademoApplication.class, args); }
+    public static void main(String[] args) {
+        SpringApplication.run(JpademoApplication.class, args);
+    }
 
 
-	@Override
-	public void run(String... args) throws Exception {
-		bookRepository.save(new Book("JpaBook",
-				new Publisher("Pubilsher1"),
-				new Publisher("puvbisher2")))
-				;
-	}
+    @Override
+    public void run(String... args) throws Exception {
+        bookRepository.save(new Book("JpaBook",
+                new Publisher("Pubilsher1"),
+                new Publisher("puvbisher2")))
+        ;
+    }
 
 }

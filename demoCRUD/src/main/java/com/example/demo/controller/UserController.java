@@ -21,38 +21,38 @@ public class UserController {
 
     //index
     @RequestMapping("/")
-    public String index(Model model){
+    public String index(Model model) {
         List<User> users = (List<User>) userRepository.findAll();
         //request.setAttribute("users"users);
-        model.addAttribute( "users",users);
+        model.addAttribute("users", users);
         return "index";
     }
 
     //
     @RequestMapping(value = "/add")
-    public String addUser(Model model){
-        model.addAttribute( "user",new User());
+    public String addUser(Model model) {
+        model.addAttribute("user", new User());
         return "addUser";
     }
 
     //
-    @RequestMapping(value = "/save",method = RequestMethod.POST)
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(User user) {
         userRepository.save(user);
         return "redirect:/";
     }
 
     //
-    @RequestMapping(value = "/edit",method = RequestMethod.GET)
-    public String editUser(@RequestParam("id") Long userId, Model model){
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    public String editUser(@RequestParam("id") Long userId, Model model) {
         Optional<User> userEdit = userRepository.findById(userId);
-        userEdit.ifPresent(user ->model.addAttribute( "user",user) );
+        userEdit.ifPresent(user -> model.addAttribute("user", user));
         return "editUser";
     }
 
     //
     @RequestMapping(value = "/delete")
-    public String deleteUser(@RequestParam("id") Long userId,Model model){
+    public String deleteUser(@RequestParam("id") Long userId, Model model) {
         userRepository.deleteById(userId);
         return "redirect:/";
     }

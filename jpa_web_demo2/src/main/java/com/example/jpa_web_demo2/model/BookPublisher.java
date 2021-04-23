@@ -13,7 +13,7 @@ import java.util.Date;
 @Setter
 
 @Entity
-@Table(name = "book_publisher" )
+@Table(name = "book_publisher")
 public class BookPublisher {
     @EmbeddedId
     private BookPublisherId id;
@@ -35,7 +35,7 @@ public class BookPublisher {
     }
 
     public BookPublisher(Book book, Publisher publisher, Date publishDate) {
-        this.id = new BookPublisherId(book.getId(),publisher.getId());
+        this.id = new BookPublisherId(book.getId(), publisher.getId());
         this.book = book;
         this.publisher = publisher;
         this.publishDate = publishDate;
