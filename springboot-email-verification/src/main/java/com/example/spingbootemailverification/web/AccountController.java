@@ -36,7 +36,7 @@ public class AccountController {
         verificationTokenService.createVerification(verificationForm.getEmail());
         return "verification-form";
     }
-    @GetMapping("verify-email")
+    @GetMapping("/verify-email")
     @ResponseBody
     public String verifyEmail(String code) {return verificationTokenService.verifyEmail(code).getBody(); }
 }

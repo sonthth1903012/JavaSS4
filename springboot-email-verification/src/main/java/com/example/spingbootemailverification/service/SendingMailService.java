@@ -56,7 +56,9 @@ public class SendingMailService {
             msg.setSubject(subject);
             msg.setContent(body, "text/html");
             Transport transport = session.getTransport();
-            transport.connect(mailProperties.getSmtp().getHost(), mailProperties.getSmtp().getUsername(), mailProperties.getSmtp().getPassword());
+            transport.connect(mailProperties.getSmtp().getHost(), mailProperties.getSmtp().getUsername(),
+                    mailProperties.getSmtp().getPassword());
+            transport.sendMessage(msg, msg.getAllRecipients());
             return true;
         } catch (Exception ex){
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, ex.getMessage(), ex);
