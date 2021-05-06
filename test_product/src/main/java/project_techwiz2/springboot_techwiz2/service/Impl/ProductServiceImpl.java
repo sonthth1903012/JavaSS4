@@ -19,11 +19,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> listProduct() {
-        try{
+        try {
             List<Product> list = productRepository.findAll();
             return list;
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -31,11 +30,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product getProById(int pro_id) {
-        try{
+        try {
             Product product = productRepository.findById(pro_id).get();
             return product;
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -46,8 +44,7 @@ public class ProductServiceImpl implements ProductService {
         try {
             productRepository.save(product);
             return true;
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
@@ -55,13 +52,12 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public boolean deleteProduct(int pro_id) {
-        try{
+        try {
             Product product = productRepository.findById(pro_id).get();
             productRepository.save(product);
             return true;
 
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
@@ -69,12 +65,11 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public boolean updateProduct(Product product) {
-        try{
+        try {
             productRepository.save(product);
             return true;
 
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;

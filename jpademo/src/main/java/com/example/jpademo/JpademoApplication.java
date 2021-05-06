@@ -20,7 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class JpademoApplication implements CommandLineRunner {
 
     @Bean
-    public Docket Swagger(){
+    public Docket Swagger() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
@@ -28,7 +28,6 @@ public class JpademoApplication implements CommandLineRunner {
                 .build();
 
     }
-
 
 
     @Autowired

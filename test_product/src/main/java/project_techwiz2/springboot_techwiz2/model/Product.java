@@ -11,9 +11,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int product_id;
     @NotEmpty(message = "Please insert product name!")
-    @Size(min = 3,max = 30)
+    @Size(min = 3, max = 30)
     private String product_name;
-    @DecimalMin(value = "0.000000000000000000001",message = "Price must be higher than 0!")
+    @DecimalMin(value = "0.000000000000000000001", message = "Price must be higher than 0!")
     private double price;
 
     @NotEmpty(message = "Please insert description!")
@@ -61,8 +61,6 @@ public class Product {
     public void setDescriptions(String descriptions) {
         this.description = descriptions;
     }
-
-
 
 
 }

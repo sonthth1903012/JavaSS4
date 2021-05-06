@@ -19,76 +19,63 @@ public class ProductController {
 
 
     @RequestMapping("")
-    public String getProducts(Model model)
-    {
+    public String getProducts(Model model) {
         return "/admin/product/productList";
     }
 
 
     @RequestMapping("/admin/insertProduct")
-    public String insertPro(Model model)
-    {
+    public String insertPro(Model model) {
         Product product = new Product();
-        model.addAttribute("proNew",product);
+        model.addAttribute("proNew", product);
         return "/admin/product/insertProduct";
     }
 
-    @RequestMapping(value = "/admin/savePro",method = RequestMethod.POST)
-    public String savePro(@ModelAttribute("proNew")@Valid Product product, BindingResult result,Model model)throws IOException
-    {
-        if (result.hasErrors())
-        {
-            model.addAttribute("proNew",product);
+    @RequestMapping(value = "/admin/savePro", method = RequestMethod.POST)
+    public String savePro(@ModelAttribute("proNew") @Valid Product product, BindingResult result, Model model) throws IOException {
+        if (result.hasErrors()) {
+            model.addAttribute("proNew", product);
             return "/admin/product/insertProduct";
         }
 
         boolean bl = productService.saveProduct(product);
-        if(bl)
-        {
+        if (bl) {
             return "redirect:/admin/product?success=Add New product success";
         }
         return "redirect:/admin/product?error=Add New product error";
     }
 
     @RequestMapping(value = "/admin/editPro")
-    public String editPro(@RequestParam("id")Integer id,Model model)
-    {
+    public String editPro(@RequestParam("id") Integer id, Model model) {
         Product product = productService.getProById(id);
-        model.addAttribute("proEdit",product);
+        model.addAttribute("proEdit", product);
         return "/admin/product/editProduct";
     }
 
-    @RequestMapping(value = "/admin/updatePro",method = RequestMethod.POST)
-    public String updatePro(@ModelAttribute("proEdit")Product product,Model model)throws IOException
-    {
+    @RequestMapping(value = "/admin/updatePro", method = RequestMethod.POST)
+    public String updatePro(@ModelAttribute("proEdit") Product product, Model model) throws IOException {
         boolean bl = productService.updateProduct(product);
-        if (bl)
-        {
+        if (bl) {
             return "redirect:/admin/product?success=Add New product success";
         }
         return "redirect:/admin/product?error=Add New product error";
     }
 
     @RequestMapping(value = "/admin/detailPro")
-    public String detailProductById(@RequestParam("id")Integer id,Model model)
-    {
+    public String detailProductById(@RequestParam("id") Integer id, Model model) {
         Product product = productService.getProById(id);
-        model.addAttribute("proDetail",product);
+        model.addAttribute("proDetail", product);
         return "/admin/product/detailProduct";
     }
 
     @RequestMapping(value = "/admin/deleteProducts")
-    public String deleteProduct(@RequestParam("id")Integer id)
-    {
+    public String deleteProduct(@RequestParam("id") Integer id) {
         boolean bl = productService.deleteProduct(id);
-        if (bl)
-        {
+        if (bl) {
             return "redirect:/admin/product?success=Delete product success";
         }
         return "redirect:/admin/product?error=Delete product error";
     }
-
-
 
 
 }

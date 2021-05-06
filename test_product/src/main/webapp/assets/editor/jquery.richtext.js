@@ -1286,7 +1286,7 @@
 
         /** INTERNAL METHODS **/
 
-        function focusNextElement () {
+        function focusNextElement() {
             // add all elements we want to include in our selection
             var focussableElements = 'a:not([disabled]):not(.richText-btn,.richText-undo,.richText-redo,.richText-help), button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
             if (document.activeElement) {
