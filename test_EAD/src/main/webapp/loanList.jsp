@@ -40,6 +40,10 @@
                             <tr>
                                 <th style="width: 10px">STT</th>
                                 <th>Loan name</th>
+                                <th>Total</th>
+                                <th>Term</th>
+                                <th>From</th>
+                                <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -47,16 +51,11 @@
                             <c:forEach items="${list}" var="loan" varStatus="itr">
                                 <tr>
                                     <td>${offset+itr.index+1}</td>
-                                    <td>${loan.loan_name }
-                                        <br>
-                                        <c:if test="${loan.status ==1}">
-                                            <span class="badge badge-success">Show</span>
-                                        </c:if>
-                                        <c:if test="${loan.status ==2}">
-                                            <span class="badge badge-danger">Hidden</span>
-                                        </c:if>
-                                        <br>
-                                            ${loan.created}
+                                    <td>${loan.name}</td>
+                                    <td>${loan.total}</td>
+                                    <td>${loan.term}</td>
+                                    <td>${loan.created}</td>
+                                    <td>${loan.status}</td>
                                     </td>
                                     <td>
                                         <a href="${pageContext.request.contextPath}/editLoan?id=${loan.loan_id}" class="btn  btn-info btn-sm"><i class="fas fa-pencil-alt"> </i> Edit</a>
@@ -89,8 +88,8 @@
                         <f:form action="${pageContext.request.contextPath}/saveLoan" method="POST" modelAttribute="loanNew">
                             <spring:bind path="loan_name">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Category name:</label>
-                                    <f:input path="loan_name" type="text"  class="form-control  ${status.error ?'border border-danger':''} ${param.errorcatename !=null ?'border border-danger':''}" id="exampleInputEmail1"   placeholder="Enter category name..."/>
+                                    <label for="exampleInputEmail1">User name:</label>
+                                    <f:input path="loan_name" type="text"  class="form-control  ${status.error ?'border border-danger':''} ${param.errorcatename !=null ?'border border-danger':''}" id="exampleInputEmail1"   placeholder="Enter User name..."/>
                                     <f:errors path="loan_name" class="text-danger"  ></f:errors>
                                     <p class="text-danger">${param.errorcatename}</p>
                                 </div>
@@ -99,14 +98,30 @@
                                 <div class="form-group">
                                     <label>Status:</label>
                                     <div class="custom-control custom-radio">
-                                        <f:radiobutton class="custom-control-input" path="status" value="1" checked="true"  id="customRadio1" />
-                                        <label for="customRadio1" class="custom-control-label">Show</label>
+                                        <f:radiobutton class="custom-control-input" path="status" value="On" checked="true"  id="customRadio1" />
+                                        <label for="customRadio1" class="custom-control-label">On</label>
                                     </div>
                                     <div class="custom-control custom-radio">
-                                        <f:radiobutton class="custom-control-input" path="status" value="2" id="customRadio2" />
-                                        <label for="customRadio2" class="custom-control-label">Hidden</label>
+                                        <f:radiobutton class="custom-control-input" path="status" value="Pending" id="customRadio2" />
+                                        <label for="customRadio2" class="custom-control-label">Pending</label>
                                     </div>
                                     <f:errors path="status" class="text-danger"  ></f:errors>
+                                </div>
+                            </spring:bind>
+                            <spring:bind path="total">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Total:</label>
+                                    <f:input path="total" type="text"  class="form-control  ${status.error ?'border border-danger':''} ${param.errorcatename !=null ?'border border-danger':''}" id="exampleInputEmail1"   placeholder="Enter total..."/>
+                                    <f:errors path="total" class="text-danger"  ></f:errors>
+                                    <p class="text-danger">${param.errorcatename}</p>
+                                </div>
+                            </spring:bind>
+                            <spring:bind path="term">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Term:</label>
+                                    <f:input path="term" type="text"  class="form-control  ${status.error ?'border border-danger':''} ${param.errorcatename !=null ?'border border-danger':''}" id="exampleInputEmail1"   placeholder="Enter term..."/>
+                                    <f:errors path="term" class="text-danger"  ></f:errors>
+                                    <p class="text-danger">${param.errorcatename}</p>
                                 </div>
                             </spring:bind>
                             <div class="card-footer">

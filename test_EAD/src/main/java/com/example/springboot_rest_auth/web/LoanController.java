@@ -51,7 +51,7 @@ public class LoanController {
     public String editLoan(@RequestParam("id")Integer id, Model model)
     {
         Loan loan = loanService.getLoanById(id);
-        model.addAttribute("loanNew",loan);
+        model.addAttribute("loanEdit",loan);
         return "loanEdit";
     }
 

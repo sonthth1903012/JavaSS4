@@ -21,7 +21,7 @@ public class Loan {
 
     private Long total;
 
-    private int status;
+    private String status;
 
     private Date created;
 
@@ -46,11 +46,11 @@ public class Loan {
         this.loan_id = loan_id;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

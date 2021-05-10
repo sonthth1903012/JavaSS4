@@ -19,7 +19,7 @@ public class LoanServiceImpl implements LoanService{
     @Override
     public List<Loan> listLoans() {
         try{
-            List<Loan> list = loanRepository.findActiveLoanStatus();
+            List<Loan> list = loanRepository.findAll();
             return list;
         }catch (Exception e)
         {
@@ -80,7 +80,7 @@ public class LoanServiceImpl implements LoanService{
     public boolean deleteLoan(long loan_id) {
         try{
             Loan loan= loanRepository.findById(loan_id).get();
-            loan.setStatus(3);
+            loan.setStatus("done");
             loanRepository.save(loan);
             return true;
         }catch (Exception e)
