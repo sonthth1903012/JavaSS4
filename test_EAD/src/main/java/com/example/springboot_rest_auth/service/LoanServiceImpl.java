@@ -53,9 +53,9 @@ public class LoanServiceImpl implements LoanService{
     }
 
     @Override
-    public boolean saveLoan(Loan menu) {
+    public boolean saveLoan(Loan loan) {
         try{
-            loanRepository.save(menu);
+            loanRepository.save(loan);
             return true;
         }catch (Exception e)
         {

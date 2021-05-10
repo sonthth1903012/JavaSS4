@@ -1,7 +1,9 @@
 package com.example.springboot_rest_auth.web;
 
 import com.example.springboot_rest_auth.model.Loan;
+import com.example.springboot_rest_auth.model.User;
 import com.example.springboot_rest_auth.service.LoanService;
+import com.example.springboot_rest_auth.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -13,11 +15,14 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class LoanController {
     @Autowired
     private LoanService loanService;
+    @Autowired
+    private UserService userService;
 
 
     @RequestMapping(path = "loanList")
@@ -33,6 +38,8 @@ public class LoanController {
     {
         if (result.hasErrors())
         {
+            List<User> listUser = userService.listUser();
+            model.addAttribute("listUser",listUser);
             return "welcome";
         }
 

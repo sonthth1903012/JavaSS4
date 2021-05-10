@@ -86,6 +86,12 @@
                         <!-- form start -->
                         <%--@elvariable id="loanNew" type=""--%>
                         <f:form action="${pageContext.request.contextPath}/saveLoan" method="POST" modelAttribute="loanNew">
+                            <div class="form-group col-md-6">
+                                <label>User:</label>
+                                <f:select class="custom-select" path="user.name">
+                                    <f:options items="${listUser}"  itemLabel="username" itemValue="id" />
+                                </f:select>
+                            </div>
                             <spring:bind path="loan_name">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">User name:</label>
