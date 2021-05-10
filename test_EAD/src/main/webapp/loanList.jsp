@@ -88,7 +88,7 @@
                         <f:form action="${pageContext.request.contextPath}/saveLoan" method="POST" modelAttribute="loanNew">
                             <div class="form-group col-md-6">
                                 <label>User:</label>
-                                <f:select class="custom-select" path="user.name">
+                                <f:select class="custom-select" path="user.id">
                                     <f:options items="${listUser}"  itemLabel="username" itemValue="id" />
                                 </f:select>
                             </div>
