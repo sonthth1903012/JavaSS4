@@ -1,4 +1,4 @@
-package com.example.csw_test.Service;
+package com.example.csw_test.service;
 
 import com.example.csw_test.jpa.Employee;
 

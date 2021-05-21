@@ -1,8 +1,8 @@
-package com.example.csw_test.ServiceImpl;
+package com.example.csw_test.service.serviceImpl;
 
 import com.example.csw_test.jpa.Employee;
 import com.example.csw_test.repository.EmployeeRepository;
-import com.example.csw_test.Service.EmployeeService;
+import com.example.csw_test.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
